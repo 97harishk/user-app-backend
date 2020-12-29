@@ -135,7 +135,7 @@ module.exports.update =  async function(req, res){
         let user = await User.findOne({_id: req.params.userId});
         if(user){
             user.first_name = req.body.first_name;
-            user.lastname_name = req.body.last_name;
+            user.last_name = req.body.last_name;
             user.username = req.body.username;
             user.password = req.body.password;
             user.save();
